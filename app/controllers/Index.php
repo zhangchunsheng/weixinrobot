@@ -10,13 +10,9 @@ class IndexController extends ApplicationController {
         $echostr = \WR\Input::request("echostr");
         $token = $this->_config['token'];
 
-        $params = array(
-            'token' => $token,
-            'timestamp' => $timestamp,
-            'nonce' => $nonce,
-        );
-        ksort($params);
-        $sha1 = sha1(join("&", $params));
+        $params = array($token, $timestamp, $nonce);
+        sort($params);
+        $sha1 = sha1(implode($params));
         if($sha1 == $signature) {
             echo $echostr;
         } else {
