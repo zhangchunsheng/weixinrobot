@@ -1,0 +1,9 @@
+<?php
+
+define("DEBUG", 0);
+
+$__robotConfig = array(
+    'token' => '',
+);
+
+return $__robotConfig;
