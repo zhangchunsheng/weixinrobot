@@ -11,7 +11,7 @@ class IndexController extends ApplicationController {
         $token = $this->_config['token'];
 
         $params = array($token, $timestamp, $nonce);
-        sort($params);
+        sort($params, SORT_STRING);
         $sha1 = sha1(implode($params));
         if($sha1 == $signature) {
             echo $echostr;
