@@ -22,5 +22,6 @@ class IndexController extends ApplicationController {
         } else {
             echo "";
         }
+        exit();
     }
 }
