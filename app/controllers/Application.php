@@ -121,8 +121,8 @@ class ApplicationController extends Yaf\Controller_Abstract {
         $this->_referrerUrl = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : "";
 
         $this->getView()->assignRef("referrerUrl", $this->_referrerUrl);
-        $this->view = $this->getView();
-        $this->view->assign('viewPath', APP_PATH . 'views');
+        $this->appview = $this->getView();
+        $this->appview->assign('viewPath', APP_PATH . 'views');
 
     }
 
