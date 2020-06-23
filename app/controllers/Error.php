@@ -4,7 +4,7 @@ class ErrorController extends \Yaf\Controller_Abstract {
     
     public function errorAction($exception) {
         
-        $this->getView()->setLayout(null);
+        //$this->getView()->setLayout(null);
 
         // fallback views path to global when error occured in modules.
         $config = Yaf\Application::app()->getConfig();

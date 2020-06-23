@@ -56,7 +56,7 @@ class ApplicationController extends Yaf\Controller_Abstract {
      */
     public function init() {
         // Set the layout.
-        $this->getView()->setLayout($this->layout);
+        //$this->getView()->setLayout($this->layout);
 
         // Assign application config file to this controller
         $this->config = Yaf\Application::app()->getConfig();
